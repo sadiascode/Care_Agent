@@ -1,0 +1,90 @@
+import 'package:care_agent/common/custom_button.dart';
+import 'package:care_agent/features/auth/screen/login_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
+
+import '../widget/custom_screen.dart';
+
+class VerifyScreen extends StatefulWidget {
+  const VerifyScreen({super.key});
+
+  @override
+  State<VerifyScreen> createState() => _VerifyScreenState();
+}
+
+class _VerifyScreenState extends State<VerifyScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Color(0xffFFF0E6),
+        body: CustomScreen(
+            svgPath: 'assets/logo.svg',
+            svgHeight: 180,
+            svgWidth: 130,
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 10),
+                  Center(child: Text("Check your email",style: TextStyle(fontSize: 24),)),
+
+                  SizedBox(height: 13),
+                  Center(child: Text("We sent a reset link to contact@gmail.com Please \n          "
+                      "               enter the 6 digit code.",style: TextStyle(fontSize: 14),)),
+
+                  SizedBox(height: 35),
+                  PinCodeTextField(
+                    length: 6,
+                    obscureText: false,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    keyboardType: TextInputType.number,
+                    animationType: AnimationType.fade,
+                    pinTheme: PinTheme(
+                        shape: PinCodeFieldShape.box,
+                        borderRadius: BorderRadius.circular(8),
+                        fieldHeight: 50,
+                        fieldWidth: 40,
+                        activeColor: Color(0xffE0712D),
+                        selectedColor: Color(0xffE0712D),
+                        inactiveColor: Color(0xffE0712D)),
+                    animationDuration: const Duration(milliseconds: 300),
+                    // controller: OTPController,
+                    appContext: context,
+                  ),
+                  SizedBox(height: 10),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          "Resend OTP",
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black54,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        SizedBox(height: 2),
+                        Container(
+                          width: 83,
+                          height: 1,
+                          color: Colors.black54,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 35),
+                  CustomButton(text: "Verify Code", onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const LoginScreen()),
+                    );
+                  })
+
+
+                ]
+            )
+        )
+    );
+  }
+}
