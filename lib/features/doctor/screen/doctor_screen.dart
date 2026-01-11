@@ -22,7 +22,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
         elevation: 0,
         backgroundColor: Colors.white,
         title: Text(
-          "Profile",
+          "Your doctors",
           style: TextStyle(
             color: Color(0xffE0712D),
             fontSize: 20,

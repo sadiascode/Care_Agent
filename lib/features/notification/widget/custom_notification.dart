@@ -42,7 +42,6 @@ class CustomNotification extends StatelessWidget {
             ),
             SizedBox(width: 12),
 
-            // Text Content
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,7 +68,6 @@ class CustomNotification extends StatelessWidget {
               ),
             ),
 
-            // Time
             Text(
               time,
               style: TextStyle(

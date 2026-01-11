@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class AppointmentCartWidget extends StatelessWidget {
   const AppointmentCartWidget({super.key});
@@ -10,13 +11,22 @@ class AppointmentCartWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
-        // ignore: deprecated_member_use
-        border: Border.all(color: const Color(0xFFE67E22).withOpacity(0.2)),
+        border: const Border(
+          left: BorderSide(color: Color(0xffE0712D), width: 5),
+          top: BorderSide(color: Color(0xffE0712D), width: 1),
+          right: BorderSide(color: Color(0xffE0712D), width: 1),
+          bottom: BorderSide(color: Color(0xffE0712D), width: 1),
+        ),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(Icons.assignment_ind_outlined, color: Colors.grey),
+          SvgPicture.asset(
+            'assets/note.svg',
+            height: 20,
+            width: 20,
+            color: Colors.grey,
+          ),
           const SizedBox(width: 12),
           const Expanded(
             child: Column(

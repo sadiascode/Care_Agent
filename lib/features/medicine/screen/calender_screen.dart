@@ -41,7 +41,7 @@ class _CalenderScreenState extends State<CalenderScreen> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
 
-            const TimeHeader(icon: Icons.wb_twilight, title: "Morning"),
+            const TimeHeader(svgPath: 'assets/morning.svg', title: "Morning"),
             const MedicineCard(
               time: "08:00 AM",
               name: "Bisocor Tablet 2.5mg",
@@ -53,14 +53,14 @@ class _CalenderScreenState extends State<CalenderScreen> {
               dosage: "1 tablet",
             ),
 
-            const TimeHeader(icon: Icons.wb_sunny_outlined, title: "Afternoon"),
+            const TimeHeader(svgPath: 'assets/noon.svg', title: "Afternoon"),
             const MedicineCard(
               time: "02:00 PM",
               name: "Bisocor Tablet 2.5mg",
               dosage: "1 tablet",
             ),
 
-            const TimeHeader(icon: Icons.wb_twilight, title: "Evening"),
+            const TimeHeader(svgPath: 'assets/sunset.svg', title: "Evening"),
             const MedicineCard(
               time: "08:00 PM",
               name: "Bisocor Tablet 2.5mg",

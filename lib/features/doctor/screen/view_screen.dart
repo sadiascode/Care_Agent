@@ -2,6 +2,7 @@ import 'package:care_agent/common/custom_medium.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../profile/screen/prescription_screen.dart';
 import '../../profile/widget/custom_prescriptions.dart';
 import '../widget/custom_doctext.dart';
 
@@ -131,7 +132,12 @@ class _ViewScreenState extends State<ViewScreen> {
                   prescriptionName: 'Prescriptin-1',
                   date: '01/05/25',
                   onDownload: () {},
-                  onShow: () {},
+                  onShow: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PrescriptionScreen()),
+                    );
+                  },
                   onDelete: () {},
                 ),
 
@@ -140,7 +146,12 @@ class _ViewScreenState extends State<ViewScreen> {
                   prescriptionName: 'Prescriptin-1',
                   date: '01/05/25',
                   onDownload: () {},
-                  onShow: () {},
+                  onShow: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PrescriptionScreen()),
+                    );
+                  },
                   onDelete: () {},
                 ),
               ],

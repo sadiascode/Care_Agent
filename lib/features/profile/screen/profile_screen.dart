@@ -1,5 +1,6 @@
 import 'package:care_agent/common/custom_medium.dart';
 import 'package:care_agent/features/profile/screen/edit_screen.dart';
+import 'package:care_agent/features/profile/screen/prescription_screen.dart';
 import 'package:care_agent/features/profile/widget/custom_prescriptions.dart';
 import 'package:care_agent/features/profile/widget/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -150,7 +151,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 prescriptionName: 'Prescriptin-1',
                 date: '01/05/25',
                 onDownload: () {},
-                onShow: () {},
+                onShow: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PrescriptionScreen()),
+                  );
+                },
                 onDelete: () {},
               ),
 
@@ -159,7 +165,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 prescriptionName: 'Prescriptin-1',
                 date: '01/05/25',
                 onDownload: () {},
-                onShow: () {},
+                onShow: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PrescriptionScreen()),
+                  );
+                },
                 onDelete: () {},
               ),
               SizedBox(height: 15),

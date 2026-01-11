@@ -10,7 +10,6 @@ class CustomDoctext extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // First Date Section
           _buildDateSection(
             date: 'Dec 01, 2025',
             advices: [
@@ -20,7 +19,6 @@ class CustomDoctext extends StatelessWidget {
           ),
           SizedBox(height: 24),
 
-          // Second Date Section
           _buildDateSection(
             date: 'October 11, 2025',
             advices: [

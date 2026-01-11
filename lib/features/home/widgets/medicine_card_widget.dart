@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MedicineCard extends StatelessWidget {
   final String time, name, dosage;
@@ -18,10 +19,12 @@ class MedicineCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
         border: const Border(
-          left: BorderSide(color: Color(0xFFE67E22), width: 4),
+          left: BorderSide(color: Color(0xffE0712D), width: 5),
+          top: BorderSide(color: Color(0xffE0712D), width: 1),
+          right: BorderSide(color: Color(0xffE0712D), width: 1),
+          bottom: BorderSide(color: Color(0xffE0712D), width: 1),
         ),
         boxShadow: [
-          // ignore: deprecated_member_use
           BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 10),
         ],
       ),
@@ -35,11 +38,13 @@ class MedicineCard extends StatelessWidget {
           const SizedBox(height: 8),
           Row(
             children: [
-              const Icon(
-                Icons.medication_outlined,
-                size: 20,
+              SvgPicture.asset(
+                'assets/pio.svg',
+                height: 20,
+                width: 20,
                 color: Colors.grey,
               ),
+
               const SizedBox(width: 10),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

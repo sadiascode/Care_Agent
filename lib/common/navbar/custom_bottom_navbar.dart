@@ -1,6 +1,5 @@
 import 'package:care_agent/features/doctor/screen/doctor_screen.dart';
-import 'package:care_agent/features/home/home_screen.dart';
-import 'package:care_agent/features/medicine/screen/add_screen.dart';
+import 'package:care_agent/features/home/screen/home_screen.dart';
 import 'package:care_agent/features/medicine/screen/medicine_screen.dart';
 import 'package:care_agent/features/notification/screen/notification_screen.dart';
 import 'package:care_agent/features/profile/screen/profile_screen.dart';

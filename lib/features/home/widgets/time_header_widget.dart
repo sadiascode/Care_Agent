@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class TimeHeader extends StatelessWidget {
-  final IconData icon;
+  final String svgPath;
   final String title;
-  const TimeHeader({super.key, required this.icon, required this.title});
+
+  const TimeHeader({
+    super.key,
+    required this.svgPath,
+    required this.title,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +18,18 @@ class TimeHeader extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, color: const Color(0xFFE67E22), size: 22),
+          SvgPicture.asset(
+            svgPath,
+            height: 32,
+            width: 32,
+            color: const Color(0xFFE67E22),
+          ),
           const SizedBox(width: 8),
           Text(
             title,
             style: const TextStyle(
-              color: Colors.grey,
-              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              color: Colors.black,
             ),
           ),
         ],
